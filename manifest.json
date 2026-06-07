@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "MV3 Lab - Instagram Analyzer",
+  "description": "Resume posts visiveis e descreve perfis do Instagram com metricas publicas da pagina.",
+  "version": "0.1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.instagram.com/*"
+  ],
+  "action": {
+    "default_title": "MV3 Lab",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.instagram.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

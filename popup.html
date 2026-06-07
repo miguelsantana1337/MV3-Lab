@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MV3 Lab</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">MV3 Lab</p>
+          <h1>Analise de perfil</h1>
+        </div>
+        <button id="analyzeButton" type="button">Analisar</button>
+      </header>
+
+      <section id="status" class="status">
+        Abra um perfil do Instagram e clique em analisar.
+      </section>
+
+      <section id="result" class="result" hidden>
+        <div class="profile-line">
+          <div>
+            <p class="eyebrow">Perfil</p>
+            <h2 id="profileName"></h2>
+          </div>
+          <a id="profileLink" target="_blank" rel="noreferrer">Abrir</a>
+        </div>
+
+        <div class="metrics">
+          <article>
+            <span id="postsMetric">-</span>
+            <small>posts</small>
+          </article>
+          <article>
+            <span id="followersMetric">-</span>
+            <small>seguidores</small>
+          </article>
+          <article>
+            <span id="followingMetric">-</span>
+            <small>seguindo</small>
+          </article>
+        </div>
+
+        <section class="block">
+          <h3>Descricao completa</h3>
+          <p id="description"></p>
+        </section>
+
+        <section class="block">
+          <h3>Bio capturada</h3>
+          <p id="bio"></p>
+        </section>
+
+        <section class="block">
+          <h3>Temas detectados</h3>
+          <div id="themes" class="chips"></div>
+        </section>
+
+        <section class="grid-two">
+          <div class="block">
+            <h3>Forcas</h3>
+            <ul id="strengths"></ul>
+          </div>
+          <div class="block">
+            <h3>Riscos</h3>
+            <ul id="risks"></ul>
+          </div>
+        </section>
+
+        <section class="block">
+          <h3>Recomendacoes</h3>
+          <ul id="recommendations"></ul>
+        </section>
+
+        <section class="block">
+          <h3>Posts visiveis resumidos</h3>
+          <ol id="posts"></ol>
+        </section>
+
+        <div class="actions">
+          <button id="copyButton" type="button">Copiar relatorio</button>
+        </div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
